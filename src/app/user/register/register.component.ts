@@ -7,7 +7,6 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-
   name = new FormControl('', [
     Validators.required,
     Validators.minLength(5)
@@ -23,11 +22,11 @@ export class RegisterComponent implements OnInit {
   ]);
   password = new FormControl('', [
     Validators.required,
-    Validators.pattern(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm)
+    Validators.pattern('/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm')
   ]);
   confirmPassword = new FormControl('', [
     Validators.required,
-    Validators.pattern(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm)
+    Validators.pattern('/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm')
   ]);
   phone = new FormControl('',[
     Validators.required,
